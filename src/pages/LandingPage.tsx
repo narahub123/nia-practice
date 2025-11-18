@@ -2,6 +2,7 @@ import { TbUserHexagon } from "react-icons/tb";
 import { Button, LandingJobCard } from "../components";
 import { fieldsOfJobs } from "../data";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const LandingPage = () => {
   const [selected, setSelected] = useState("");
@@ -38,7 +39,9 @@ export const LandingPage = () => {
         </div>
       </main>
       <footer className="flex justify-center mt-8">
-        <Button>다음으로</Button>
+        <Link to="/mission">
+          <Button>다음으로</Button>
+        </Link>
       </footer>
     </div>
   );

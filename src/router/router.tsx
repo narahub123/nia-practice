@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AdminLayout, RootLayout } from "../layouts";
-import { LandingPage } from "../pages";
+import { LandingPage, MissionPage } from "../pages";
 import { AdminIndex } from "../components";
 
 export const router = createBrowserRouter([
@@ -13,10 +13,14 @@ export const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/login",
-        element: <>로그인</>,
+        path: "/mission",
+        element: <MissionPage />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <>로그인</>,
   },
   {
     path: "/admin",
