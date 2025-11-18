@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "../layouts";
+import { LandingPage } from "../pages";
 
 export const router = createBrowserRouter([
   {
@@ -8,7 +9,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <>랜딩 페이지</>,
+        element: <LandingPage />,
       },
       {
         path: "/login",
