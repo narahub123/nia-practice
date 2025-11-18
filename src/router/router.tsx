@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { RootLayout } from "../layouts";
+import { AdminLayout, RootLayout } from "../layouts";
 import { LandingPage } from "../pages";
+import { AdminIndex } from "../components";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,20 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <>로그인</>,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        index: true,
+        element: <AdminIndex />,
+      },
+      {
+        path: ":category",
+        element: <>메인</>,
       },
     ],
   },
