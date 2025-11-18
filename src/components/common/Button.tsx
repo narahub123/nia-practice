@@ -12,7 +12,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const className = twMerge(
-    "bg-white/20 py-4 px-8  border border-white/30 backdrop-blur-xl hover:bg-white/10 text-white rounded-lg",
+    "bg-white/20 py-4 px-8  border border-white/30 backdrop-blur-xl hover:bg-white/10 text-white rounded-lg cursor-pointer",
     _className
   );
 
