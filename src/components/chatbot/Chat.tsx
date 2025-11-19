@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LuCircle, LuX } from "react-icons/lu";
 import { twMerge } from "tailwind-merge";
+import { useModalStore } from "../../stores";
 
 interface Chat {
   chat: {
@@ -19,6 +20,8 @@ export const Chat = ({ chat }: Chat) => {
   const [selected, setSelected] = useState(5);
   const { type, text, ques } = chat;
 
+  const { onOpen } = useModalStore();
+
   const className = twMerge(
     "px-4 py-2 rounded-lg space-y-4 shadow-lg",
     type === "ai" && "bg-yellow-200",
@@ -28,6 +31,8 @@ export const Chat = ({ chat }: Chat) => {
 
   const handleClick = (index: number) => {
     setSelected(index);
+
+    onOpen();
   };
   return (
     <>
