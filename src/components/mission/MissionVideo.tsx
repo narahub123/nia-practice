@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import type { MissionType, ReactVideoProps } from "../../types";
 import { Video } from "../common";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 type MissionVideo = ReactVideoProps & {
   isStoryOn?: boolean;

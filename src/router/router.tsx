@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AdminLayout, RootLayout } from "../layouts";
-import { LandingPage, MissionPage } from "../pages";
+import { ChatbotPage, LandingPage, MissionPage } from "../pages";
 import { AdminIndex } from "../components";
 
 export const router = createBrowserRouter([
@@ -15,6 +15,10 @@ export const router = createBrowserRouter([
       {
         path: "/mission",
         element: <MissionPage />,
+      },
+      {
+        path: "/chatbot",
+        element: <ChatbotPage />,
       },
     ],
   },

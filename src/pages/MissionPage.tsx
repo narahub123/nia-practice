@@ -2,6 +2,7 @@ import { useState } from "react";
 import { video1 } from "../assets";
 import { Button, MissionVideo } from "../components";
 import type { MissionType } from "../types";
+import { Link } from "react-router-dom";
 
 export const MissionPage = () => {
   const [isOn, setIsOn] = useState(false);
@@ -20,7 +21,9 @@ export const MissionPage = () => {
       </main>
       <footer className="flex justify-center mt-8 gap-4">
         <Button onClick={handleClick}>스토리 보기</Button>
-        <Button>다음</Button>
+        <Link to="/chatbot">
+          <Button>SKIP</Button>
+        </Link>
       </footer>
     </div>
   );
